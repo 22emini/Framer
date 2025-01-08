@@ -1,6 +1,6 @@
 import React from 'react'
 import{motion} from 'framer-motion'
-import { Teaching } from './assets/components/Teaching'
+
 const App = () => {
   return (
  <>
@@ -36,8 +36,26 @@ const App = () => {
     <h1 className=" text-4xl font-bold"> section three</h1>
     <p className=' text-lg '>Hey! I am The Third section</p>
     </motion.div>
+    <div className=' flex justify-center items-center'>
+    <motion.div 
+ initial ={{opacity: 0,rotateX:"360deg" }}
+ whileInView={{opacity: 1, rotateX:0}}
+ transition={{duration: 3, type:'spring'}}
+ animate={{rotate:"180deg"}}
+ className=" w-60 bg-black  flex justify-center items-center m-8 h-72 p-40 text-white">
+    <h1 className=" text-4xl font-bold"> </h1>
+    <p className=' text-lg '></p>
+    </motion.div>
+    </div>
+    <motion.button
+    whileHover={{scale:1.05}}
+    whileTap={{scale:0.95, rotate :"360deg"  }}
+    
+    className=" px-6 py-4 flex justify-center item-cen mx-4 my-3 bg-blue-800 w-36 text-white rounded-2xl">
+Submit
+    </ motion.button>
  </div>
- <Teaching />
+ 
  </>
   )
 }
